@@ -1,8 +1,36 @@
 ![](repo/ipwndfu.png)
-# Open-source jailbreaking tool for older iOS devices
+# Open-source jailbreaking tool for many iOS devices
 
 
 **Read [disclaimer](#disclaimer) before using this software.*
+
+
+## checkm8
+
+* permanent unpatchable bootrom exploit for hundreds of millions of iOS devices
+
+* meant for researchers, this is not a jailbreak with Cydia yet
+
+* allows dumping SecureROM, decrypting keybags for iOS firmware, and demoting device for JTAG
+
+* current SoC support: s5l8947x, s5l8950x, s5l8955x, s5l8960x, t8002, t8004, t8010, t8011, t8015
+
+* future SoC support: s5l8940x, s5l8942x, s5l8945x, s5l8747x, t7000, t7001, s7002, s8000, s8001, s8003, t8012
+
+* full jailbreak with Cydia on latest iOS version is possible, but requires additional work
+
+
+## Quick start guide for checkm8
+
+1. Use a cable to connect device to your Mac. Hold buttons as needed to enter DFU Mode.
+
+2. First run ```./ipwndfu -p``` to exploit the device. Repeat the process if it fails, it is not reliable.
+
+3. Run ```./ipwndfu --dump-rom``` to get a dump of SecureROM.
+
+4. Run ```./ipwndfu --decrypt-gid KEYBAG``` to decrypt a keybag.
+
+5. Run ```./ipwndfu --demote``` to demote device and enable JTAG.
 
 
 ## Features
@@ -98,7 +126,7 @@ geohot for limera1n exploit
 
 posixninja and pod2g for SHAtter exploit
 
-iPhone Dev Team for 24Kpwn exploit
+chronic, CPICH, ius, MuscleNerd, Planetbeing, pod2g, posixninja, et al. for 24Kpwn exploit
 
 pod2g for steaks4uce exploit
 
